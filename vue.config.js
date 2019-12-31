@@ -15,10 +15,16 @@ module.exports = {
       title: "秃头的科比",
       chunks: ["chunk-vendors","chunk-common","twoHands"]
     },
-    ni: {
-      entry: "./src/views/ni/ni.js",
-      template: "./src/views/ni/ni.html",
-      filename: "ni.html",
+    study: {
+      entry: "./src/views/study/study.js",
+      template: "./src/views/study/study.html",
+      filename: "study.html",
+      title: "秃头的科比"
+    },
+    biji: {
+      entry: "./src/views/biji/biji.js",
+      template: "./src/views/biji/biji.html",
+      filename: "biji.html",
       title: "秃头的科比"
     }
   }

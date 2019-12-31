@@ -29,27 +29,24 @@
          <div class="model_underLine"></div>
          <div class="box">
           <div class="box_item">
-            <div class="box_item_shape"></div>
-             <div class="box_item_text">
-              <a href="twoHands.html" target="_blank">第一个模块的简介</a></div> 
+            <a href="twoHands.html" target="_blank"><div class="box_item_shape"></div></a>
+             <div class="box_item_text">二手交易市场</div> 
           </div> 
           <div class="box_item">
-            <div class="box_item_shape"></div>
-            <div class="box_item_text">
-              
-            </div>
+            <a href="study.html" target="_blank"><div class="box_item_shape"></div></a>
+            <div class="box_item_text">学习交流区</div>
           </div>
           <div class="box_item">
             <div class="box_item_shape"></div>
-            <div class="box_item_text">第三个模块的简介</div>
+            <div class="box_item_text">大学生实习兼职区</div>
           </div>
           <div class="box_item">
             <div class="box_item_shape"></div>
-            <div class="box_item_text">第四个模块的简介</div>
+            <div class="box_item_text">新东西试验交流区（游戏）</div>
           </div>
           <div class="box_item">
             <div class="box_item_shape"></div>
-            <div class="box_item_text">第五个模块的简介</div>
+            <div class="box_item_text">全国学生各类比赛直播区</div>
           </div>
           <div class="box_item">
             <div class="box_item_shape"></div>
