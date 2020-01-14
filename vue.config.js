@@ -21,6 +21,12 @@ module.exports = {
       filename: "study.html",
       title: "秃头的科比"
     },
+    video: {
+      entry: "./src/views/video/video.js",
+      template: "./src/views/video/video.html",
+      filename: "video.html",
+      title: "秃头的科比"
+    },
     biji: {
       entry: "./src/views/biji/biji.js",
       template: "./src/views/biji/biji.html",

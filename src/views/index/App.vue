@@ -37,6 +37,10 @@
             <div class="box_item_text">学习交流区</div>
           </div>
           <div class="box_item">
+            <a href="video.html" target="_blank"><div class="box_item_shape"></div></a>
+            <div class="box_item_text">视频区</div>
+          </div>
+          <div class="box_item">
             <div class="box_item_shape"></div>
             <div class="box_item_text">大学生实习兼职区</div>
           </div>
@@ -44,10 +48,7 @@
             <div class="box_item_shape"></div>
             <div class="box_item_text">新东西试验交流区（游戏）</div>
           </div>
-          <div class="box_item">
-            <div class="box_item_shape"></div>
-            <div class="box_item_text">全国学生各类比赛直播区</div>
-          </div>
+      
           <div class="box_item">
             <div class="box_item_shape"></div>
             <div class="box_item_text">第六个模块的简介</div>
