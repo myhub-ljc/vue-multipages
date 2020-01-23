@@ -32,6 +32,12 @@ module.exports = {
       template: "./src/views/biji/biji.html",
       filename: "biji.html",
       title: "秃头的科比"
+    },
+    parttime: {
+      entry: "./src/views/parttime/parttime.js",
+      template: "./src/views/parttime/parttime.html",
+      filename: "parttime.html",
+      title: "秃头的科比"
     }
   }
 }
