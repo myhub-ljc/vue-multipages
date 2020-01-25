@@ -310,6 +310,86 @@ main {
 			margin-left: 600px;
 			font-size: xx-large;
 		}
+		.yao{
+			margin-top:  560px;
+			margin-left: 600px;
+			font-size: xx-large;
+		}
+	
+ul {
+    list-style: none;
+}
+.tab {
+    width: 100%;
+    background-size: cover;
+    margin-top: -20px;
+}
+.tab .box {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 850px;
+}
+.tab .box .menus {
+    width: 200px;
+    height: 700px;
+    background: rgb(92,94,103);
+    float: left;
+    margin-top: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tab .box .menus li {
+    width: 200px;
+    height: 70px;
+    background: rgb(92,94,103);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    line-height: 70px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.tab .box .menus li:nth-child(7) {
+    border-bottom: none;
+}
+.tab .box .bg {
+    height: 110px !important;
+    background: rgb(0,159,233) !important;
+    line-height: 110px !important;
+}
+.tab .right {
+    float: left;
+    width: 950px;
+    margin-top: 25px;
+    height: 800px;
+    overflow: hidden;
+    margin-left: 50px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+}
+.tab .tab_right {
+    width: 950px;
+    height: 800px;
+    color: #fff;
+    text-align: center;
+
+    position:relative;
+}
+.tab .tab_right img {
+    width: 100px;
+		height: 100px;
+		margin-left: -600px;
+}
+.tab .scroll {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
 </style>
 
 </head>
@@ -483,7 +563,50 @@ main {
 		<div class="img6"></div>
 	</div>
 </main>
-<div class="zhu"><p>学习交流之家</p></div>
+<div class="zhu"><p>今日推荐</p></div>
+<div class="yao"><p>学课之家</p></div>
+<div class="tab">
+	<div class="box">
+			<ul class="menus">
+					<li class="bg">tab1</li>
+					<li>tab2</li>
+					<li>tab3</li>
+					<li>tab4</li>
+					<li>tab5</li>
+					<li>tab6</li>
+					<li>tab7</li>
+			</ul>
+			<div class="right">
+					<div class="scroll">
+							<div class="tab_right">
+									<img src="../../../static/images/carousel2.png" alt="">
+							</div>
+							<div class="tab_right">
+									<img src="assets/a2.png" alt="">
+							</div>
+							<div class="tab_right">
+									<img src="assets/a3.png" alt="">
+							</div>
+							<div class="tab_right">
+								
+									<p>woowowo</p>
+									<img src="http://b309.photo.store.qq.com/psb?/V10dFOfT202Olu/YkXYQ.Z*Q0wXcTJKtHkHot7CegUwdAp0*TW4SEOGHAk!/m/dDUBAAAAAAAAnull&bo=gAKAAgAAAAARBzA!&rf=photolist&t=5" width="200" height="200"/>
+							</div>
+							<div class="tab_right">
+									<img src="assets/a5.png" alt="">
+							</div>
+							<div class="tab_right">
+									<img src="assets/a6.png" alt="">
+							</div>
+							<div class="tab_right">
+									<img src="assets/a7.png" alt="">
+							</div>
+					</div>
+			</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
 $('.choose').click(function () {
@@ -566,6 +689,25 @@ $('.ship').click(function () {
 	$('#third').removeClass('active');
 	$('#fourth').addClass('active');
 });
+
+$('.tab .menus li').each(function(){
+    $('.tab .menus li').mouseover(function(){
+        $('.tab .menus li').removeClass('bg');
+        $(this).addClass('bg');
+        var index = $(this).index();
+        var arr = [
+                'assets/bg1.png',
+                'assets/bg2.png',
+                'assets/bg3.png',
+                'assets/bg4.png',
+                'assets/bg5.png',
+                'assets/bg6.png',
+                'assets/bg7.png',
+            ] // 背景图片  不需要注释即可
+        $('.tab .scroll').css('margin-top',-index*800+'px');
+        $('.tab').css('background-image','url('+arr[index]+')')// 背景图片  不需要注释即可
+    })
+})
 </script>
 </body>
 </html>
