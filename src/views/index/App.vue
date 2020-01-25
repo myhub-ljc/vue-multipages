@@ -7,7 +7,12 @@
     <!--头部和（轮播，新闻导航）之间的导航栏-->
     <div class="dao">
       <div class="biao">
-        <p>购物车 登陆</p>
+        <img class="carousel-img" src="../../../static/images/cart_empty.png"/>
+        <strong>购物车</strong>
+      </div>
+      <div class="biao">
+        <img class="carousel-img" src="../../../static/images/小蜜.png"/>
+        <strong>登陆</strong>
       </div>
     </div>
     <!--轮播图-->
@@ -32,19 +37,28 @@
          <div class="model_underLine"></div>
          <div class="box">
           <div class="box_item">
-            <a href="twoHands.html" target="_blank"><div class="box_item_shape"></div></a>
+            <a href="twoHands.html" target="_blank">
+            <div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/小蜜.png"/>
+            </div></a>
              <div class="box_item_text">二手交易市场</div> 
           </div> 
           <div class="box_item">
-            <a href="study.html" target="_blank"><div class="box_item_shape"></div></a>
+            <a href="study.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+              </div></a>
             <div class="box_item_text">学习交流区</div>
           </div>
           <div class="box_item">
-            <a href="video.html" target="_blank"><div class="box_item_shape"></div></a>
+            <a href="video.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_oee.png"/>
+              </div></a>
             <div class="box_item_text">学生赛事区</div>
           </div>
           <div class="box_item">
-            <a href="parttime.html" target="_blank"><div class="box_item_shape"></div></a>
+            <a href="parttime.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+              </div></a>
             <div class="box_item_text">学生兼职区</div>
           </div>
           <div class="box_item">
@@ -85,15 +99,25 @@ export default {
   align-items: center;
   background-color: pink;
 }
+.box1{
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
+  margin-left: -1px;
+  margin-top: 13px;
+}
 .dao{
   width: 100%;
   height: 50px;
   margin-top: -10px;
   background: white;
+  display: flex;
 }
-.biao{
-  margin-left: 1000px;
-  text-align: center;
+
+.biao img{
+  width: 30px;
+  height: 30px;
+  margin: 4px 5px;
 }
 /*头部标题*/
 #wzm{

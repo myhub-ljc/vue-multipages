@@ -16,4 +16,7 @@ export default {
     margin-left: -480px;
     float: left;
   }
+   h2{
+    margin-left: 220px;
+  }
 </style>

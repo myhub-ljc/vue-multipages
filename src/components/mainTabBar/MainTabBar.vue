@@ -2,19 +2,19 @@
   <!--tabbar和tabbarItem-->
   <tab-bar>
       <tab-bar-item path="/zonghe" activeColor="blue">
-       <div slot="item-text">综合</div> 
+       <div slot="item-text" class="item">综合</div> 
       </tab-bar-item> 
       <tab-bar-item path="/gonggao" activeColor="blue">
-        <div slot="item-text">公告</div>
+        <div slot="item-text" class="item">公告</div>
       </tab-bar-item>
       <tab-bar-item path="/saishi" activeColor="blue">
-        <div slot="item-text">赛事</div>
+        <div slot="item-text" class="item">赛事</div>
       </tab-bar-item>
       <tab-bar-item path="/gonglue" activeColor="blue">
-        <div slot="item-text">攻略</div>
+        <div slot="item-text" class="item">攻略</div>
       </tab-bar-item>
       <tab-bar-item path="/shequ" activeColor="blue">
-        <div slot="item-text">社区</div>
+        <div slot="item-text" class="item">社区</div>
       </tab-bar-item>
    </tab-bar>
 </template>
@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style>
-
+.item{
+  text-align: center;
+}
 </style>
