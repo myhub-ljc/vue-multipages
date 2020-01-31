@@ -38,6 +38,18 @@ module.exports = {
       template: "./src/views/parttime/parttime.html",
       filename: "parttime.html",
       title: "秃头的科比"
+    },
+    sijia: {
+      entry: "./src/views/sijia/sijia.js",
+      template: "./src/views/sijia/sijia.html",
+      filename: "sijia.html",
+      title: "秃头的科比"
+    },
+    product: {
+      entry: "./src/views/product/product.js",
+      template: "./src/views/product/product.html",
+      filename: "product.html",
+      title: "秃头的科比"
     }
   }
 }

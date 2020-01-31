@@ -62,19 +62,23 @@
             <div class="box_item_text">学生兼职区</div>
           </div>
           <div class="box_item">
-            <div class="box_item_shape"></div>
-            <div class="box_item_text">新东西试验交流区</div>
+            <a href="product.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_cad.png"/>
+              </div></a>
+            <div class="box_item_text">新产品体验区</div>
           </div>
       
           <div class="box_item">
-            <div class="box_item_shape"></div>
+            <a href="sijia.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+              </div></a>
             <div class="box_item_text">私家小厨</div>
           </div>
          </div>
        </div>
     </div>
 </template>
-
+  
 <script>
 import carousel from '../../index/carousel.vue'
 import MainTabBar from '../../components/mainTabBar/MainTabBar'

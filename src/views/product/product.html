@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新产品体验区</title>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .me{width:100%;
+    height:650px;
+    margin-top: -45px;
+	font-family: '微软雅黑';
+	background-color: #191629;
+}
+h1{
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+}
+h2{width: 960px;margin: 20px auto;font-size: 18px;line-height: 25px;font-weight: normal;position: absolute;left: 50%;margin-left: -480px;color: #fff;z-index: 1;}
+.part-tese{height:550px;top: -180px;}
+.content-part{position:absolute;width:1200px;left:50%;margin-left:-600px;margin-top: 50px;}
+.content-part.show .content-title{opacity:1;transform:translateY(0);-ms-transform:translateY(0);-webkit-transform:translateY(0);-moz-transform:translateY(0);-o-transform:translateY(0);transition:all 1s;-webkit-transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s}
+.part-tese .content-title{background:url(../images/yys_tese_title.png) no-repeat center}
+.content-part .content-title{opacity:0;transform:translateY(50px);-ms-transform:translateY(50px);-webkit-transform:translateY(50px);-moz-transform:translateY(50px);-o-transform:translateY(50px)}
+.content-part .content-title{position:absolute;width:650px;height:263px;top:0;left:50%;margin-left:-325px}
+.part-tese .shadow{position:absolute;width:1014px;height:190px;bottom:0;left:50%;margin-left:-507px;background:url(../images/yys_tese_shadow.png)}
+.part-tese.show .gallery_container{opacity:1;transform:translateY(0);-ms-transform:translateY(0);-webkit-transform:translateY(0);-moz-transform:translateY(0);-o-transform:translateY(0);transition:all 1s .1s;-webkit-transition:all 1s .1s;-moz-transition:all 1s .1s;-o-transition:all 1s .1s}
+.part-tese .gallery_container{position:absolute;width:1000px;height:550px;top:210px;left:50%;margin-left:-500px}
+.part-tese .gallery_container.st02{top:800px}
+.part-tese .gallery_container{opacity:0;transform:translateY(200px);-ms-transform:translateY(200px);-webkit-transform:translateY(200px);-moz-transform:translateY(200px);-o-transform:translateY(200px)}
+.gallery_container{position:absolute;top:0;left:0}
+.part-tese .gallery_container .gallery_wrap{width:720px;height:520px}
+.gallery_container .gallery_wrap{width:320px;height:474px}
+.threeD_gallery_wrap{position:absolute;left:50%;top:50%;-webkit-perspective:1000px;-moz-perspective:1000px;-ms-perspective:1000px;perspective:1000px}
+.front_side{z-index:5;-webkit-transform:rotateY(0) translateX(0) translateZ(0);-moz-transform:rotateY(0) translateX(0) translateZ(0);-ms-transform:rotateY(0) translateX(0) translateZ(0);-o-transform:rotateY(0) translateX(0) translateZ(0);transform:rotateY(0) translateX(0) translateZ(0)}
+.threeD_gallery_item{position:absolute;width:100%;height:100%;cursor:pointer;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-ms-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}
+.part-tese .gallery_right_middle{z-index:3;transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6);-ms-transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6);-webkit-transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6);-moz-transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6);-o-transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6)}
+.gallery_right_middle{z-index:3;-webkit-transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95);-moz-transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95);-ms-transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95);-o-transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95);transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95)}
+.gallery_out{-webkit-transform:rotateY(0) translateX(0) translateZ(0) scale(.6);-moz-transform:rotateY(0) translateX(0) translateZ(0) scale(.6);-ms-transform:rotateY(0) translateX(0) translateZ(0) scale(.6);-o-transform:rotateY(0) translateX(0) translateZ(0) scale(.6);transform:rotateY(0) translateX(0) translateZ(0) scale(.6);z-index:-1;opacity:0!important}
+.part-tese .gallery_left_middle{z-index:3;transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6);-ms-transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6);-webkit-transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6);-moz-transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6);-o-transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6)}
+.gallery_left_middle{z-index:3;-webkit-transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95);-moz-transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95);-ms-transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95);-o-transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95);transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95)}
+.part-tese .gallery_container .gallery_wrap img{width:100%}
+.gallery_container .gallery_item img.show{visibility:visible}
+.gallery_container .gallery_item img{width:100%;height:100%;visibility:hidden}
+.part-tese .gallery_container .gallery_wrap .line-b,.part-tese .gallery_container .gallery_wrap .line-l,.part-tese .gallery_container .gallery_wrap .line-r,.part-tese .gallery_container .gallery_wrap .line-t{position:absolute;background:#fff}
+.part-tese .gallery_container .gallery_wrap .front_side .line-t{width:700px;transition:all .2s .2s;-webkit-transition:all .2s .2s;-moz-transition:all .2s .2s;-o-transition:all .2s .2s}
+.part-tese .gallery_container .gallery_wrap .line-t{height:1px;width:0;top:10px;left:10px}
+.part-tese .gallery_container .gallery_wrap .front_side .line-r{height:500px;transition:all .2s .4s;-webkit-transition:all .2s .4s;-moz-transition:all .2s .4s;-o-transition:all .2s .4s}
+.part-tese .gallery_container .gallery_wrap .line-r{width:1px;height:0;right:10px;top:10px}
+.part-tese .gallery_container .gallery_wrap .front_side .line-b{width:700px;transition:all .2s .6s;-webkit-transition:all .2s .6s;-moz-transition:all .2s .6s;-o-transition:all .2s .6s}
+.part-tese .gallery_container .gallery_wrap .line-b{height:1px;width:0;bottom:10px;right:10px}
+.part-tese .gallery_container .gallery_wrap .front_side .line-l{height:500px;transition:all .2s .8s;-webkit-transition:all .2s .8s;-moz-transition:all .2s .8s;-o-transition:all .2s .8s}
+.part-tese .gallery_container .gallery_wrap .line-l{width:1px;height:0;left:10px;bottom:10px}
+.gallery_container .prev{left: 0;}
+.gallery_container .next{right: 0;}
+.gallery_container .prev,.gallery_container .next{position: absolute;top: 15px;width: 140px;height: 520px;z-index:99;}
+</style>
+</head>
+<body>
+  <div class="me">
+  <h1>近日新品</h1>
+<div class="content-part part-tese">
+	<div class="content-title">
+	</div>
+	<div class="shadow">
+	</div>
+	<div class="gallery_container">
+		<div class="gallery_wrap threeD_gallery_wrap" style="margin-left: -360px; margin-top: -260px;">
+			<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_left_middle">
+				<img src="images/yys_banner1.jpg" class="show">
+				<div class="line-t">
+				</div>
+				<div class="line-r">
+				</div>
+				<div class="line-b">
+				</div>
+				<div class="line-l">
+				</div>
+			</div>
+			<div href="javascript:;" class="gallery_item threeD_gallery_item front_side">
+				<img src="images/yys_banner2.jpg" class="show">
+				<div class="line-t">
+				</div>
+				<div class="line-r">
+				</div>
+				<div class="line-b">
+				</div>
+				<div class="line-l">
+				</div>
+			</div>
+			<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_right_middle">
+				<img src="images/yys_banner3.jpg" class="show">
+				<div class="line-t">
+				</div>
+				<div class="line-r">
+				</div>
+				<div class="line-b">
+				</div>
+				<div class="line-l">
+				</div>
+			</div>
+			<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_out">
+				<img src="images/yys_banner4.jpg" class="show">
+				<div class="line-t">
+				</div>
+				<div class="line-r">
+				</div>
+				<div class="line-b">
+				</div>
+				<div class="line-l">
+				</div>
+			</div>
+		</div>
+		<a class="prev" href="javascript:;"></a> <a class="next" href="javascript:;"></a>
+	</div>
+</div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> 
+
+<script>
+
+  /* by:Yangyunhe——David Yang
+***阴阳师轮播图插件
+***插件支持轮播所需图片数量为至少为四张
+***在调用该插件时传入图片数量
+*/
+(function($) {
+	$.fn.gallery_slider = function(options) {
+	  var _ops = $.extend({
+	      imgNum: 5 , //图片数量
+	      gallery_item_left: '.prev' , //左侧按钮
+	      gallery_item_right: '.next' , //右侧按钮
+	      gallery_left_middle: '.gallery_left_middle', //左侧图片容器
+	      gallery_right_middle: '.gallery_right_middle', //左侧图片容器
+	      threeD_gallery_item: '.threeD_gallery_item' //图片容器
+	  }, options);
+	  var _this = $(this),
+	  		_imgNum = _ops.imgNum, //图片数量
+	  		_gallery_item_left = _ops.gallery_item_left, //左侧按钮
+	  		_gallery_item_right = _ops.gallery_item_right, //右侧按钮
+	  		_gallery_left_middle = _ops.gallery_left_middle, //左侧图片容器
+	  		_gallery_right_middle = _ops.gallery_right_middle, //左侧图片容器
+	  		_threeD_gallery_item = _ops.threeD_gallery_item; //图片容器
+	  		
+  	//左侧按钮绑定点击事件
+  	_this.find(_gallery_item_left).on('click',function(){
+			var idx = parseInt(_this.find(_gallery_left_middle).index());
+			//当前展示图片逻辑
+			_this.find(_threeD_gallery_item).eq(idx).removeClass('gallery_left_middle').addClass('front_side');
+			//当idx值为0时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == 0 ? idx + _imgNum - 1 : idx - 1).removeClass('gallery_out').addClass('gallery_left_middle');
+			//当idx值为_imgNum - 3时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == _imgNum - 3 ? idx + 2 : idx - _imgNum + 2).removeClass('gallery_right_middle').addClass('gallery_out');
+			//当idx值为_imgNum - 2时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == _imgNum - 2 ? idx + 1 : idx - _imgNum + 1).removeClass('front_side').addClass('gallery_right_middle');
+		})
+		//右侧按钮绑定点击事件
+		_this.find(_gallery_item_right).on('click',function(){
+			var idx = parseInt(_this.find(_gallery_right_middle).index());
+			//当前展示图片逻辑
+			_this.find(_threeD_gallery_item).eq(idx).removeClass('gallery_right_middle').addClass('front_side');
+			//当idx值为0时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == 0 ? idx + _imgNum - 1 : idx - 1).removeClass('front_side').addClass('gallery_left_middle');
+			//当idx值为1时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == 1 ? idx + _imgNum - 2 : idx - 2).removeClass('gallery_left_middle').addClass('gallery_out');
+			//当idx值为_imgNum - 2时，执行逻辑
+			_this.find(_threeD_gallery_item).eq(idx == _imgNum - 2 ? idx + 1 : idx - _imgNum + 1).removeClass('gallery_out').addClass('gallery_right_middle');
+		})
+	};
+})(jQuery);
+	$(function(){
+		$('.content-part.part-tese').addClass('show');
+		$('.gallery_container').gallery_slider({imgNum: 4});
+	})
+	</script>
+</body>
+</html>

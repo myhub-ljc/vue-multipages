@@ -101,7 +101,7 @@ export default {
   width: 780px;
   height: 360px;
   text-align: center;
-  background-color: #bdbdbd;
+  background-color: pink;
 }
   .carousel-index{
     margin-left: -50px;
