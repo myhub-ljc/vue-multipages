@@ -21,9 +21,9 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      background-color: #d4d7de;
+      background-color: rgb(192,192,192);
       width: 100%;
-      height: 160px;
+      height: 100px;
       z-index: 1;
       margin-top: -50px;
       padding: 0;
@@ -33,17 +33,13 @@
       display: flex;
       justify-content: right;
       list-style: none;
-      margin-right: 15%;
+      margin-left: 200px;
     }
 
-    .logo{
-      flex: 1 1 auto;
-      margin-left: 10%;
-      margin-top: 5%;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    h1{
+      font-size: 40px;
       font-weight: bold;
-      font-size: 35px;
+      
     }
 
     a{
@@ -64,6 +60,8 @@
       background-repeat: no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
+      margin-top: 40px;
+      background-color:rgb(250,250,190);
     }
 
     .barea, .carea, .darea, .earea{
@@ -75,6 +73,7 @@
       flex-direction: row;
       width: 100%;
       height: 700px;
+      background-color:rgb(250,250,190);
     }
 
     .text-part{
@@ -82,144 +81,64 @@
       height: 80%;
     }
 
-    h1{
-      font-size: 50px;
-      font-family: Audiowide;
-    }
-
     html{
       scroll-behavior: smooth;
     }
 
-    .product-card{
-      width: 300px;
-      height: 450px;
-      background: #ecedef;
-      padding: 30px;
-      position: absolute;
-      left: 20%;
-      top: 30%;
-      transform: translate(-50%,-50%);
-      text-transform: uppercase;
-    }
-
-    .product-card h1{
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-
-    .product-card p{
-      font-size: 13px;
-      color: #bbb;
-    }
-
-    .product-pic{
-      background-image: url(http://m.qpic.cn/psc?/V10dFOfT2bq6DV/OErzpq5D9LJxW5knQIpOPrsYrftcu8YcNukKFfeaF2XwROjVcflnR9LDlKuqWjH1kMWH0DN45yVQ09q4qeWaN0h3W3tAd*0U*Q63dr.xfLs!/anull&bo=OASgBQAAAAARB6k!&rf=photolist&t=5);
-      width: 100%;
-      height: 260px;
-      background-size: cover;/*background-repeat*/
-      background-position: center;
-      transition: .6s linear;
-    }
-
-    .product-colors{
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .product-colors span{
-      width: 14px;
-      height: 14px;
-      margin: 0px 10px;
-      border-radius: 50%;
-      cursor: pointer;
+    li a {
       position: relative;
+      display: block;
+      color: white;
+      width: 70px;
+      height: 35px;
+      font-size: 3px;
+      text-align: center;
+      line-height: 33px;
+      border-radius: 10%;
+      background: burlywood;
+      transition: 0.6s;
     }
 
-    .blue{
-      background: #7ed6df;
+    li a:hover {
+      text-shadow: 0 0 4px #25ccf7;
     }
 
-    .green{
-      background: #badc58;
-    }
-
-    .yellow{
-      background: #f9ca24;
-    }
-    
-    .rose{
-      background: #ff7979;
-    }
-
-    .product-colors .active:after{
+    li a::before {
       content: "";
-      width: 22px;
-      height: 22px;
-      border: 2px solid #8888;
       position: absolute;
-      border-radius: 50%;
-      box-sizing: border-box;
-      left: -4px;
-      top: -4px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 10%;
+      background: #25ccf7;
+      transition: 0.6s;
+      transform: scale(0.8);
+      z-index: -1;
     }
 
-    .product-info{
-      display: flex;
-      align-items: center;
-    }
-
-    .product-price{
-      color: #7ed6df;
-      font-size: 26px;
-    }
-
-    .product-button{
-      margin-left: auto;
-      color: #7ed6df;
-      text-decoration: none;
-      border: 2px solid;
-      padding: 8px 24px;
-      border-radius: 20px;
-      transition: .4s linear;
-    }
-
-    .product-button:hover{
-      transform: scale(1.06);
+    li a:hover::before {
+      box-shadow: 0 0 14px 2px #25ccf7;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
   <div class="navbar">
-    <a href="#" class="logo">二手</a>
+    <h1>二手交易之家</h1>
     <ul class="nav">
       <li><a href="#a" active>
-       a
+       二手书籍
       </a></li>
-      <li><a href="#b">b</a></li>
-      <li><a href="#c">c</a></li>
-      <li><a href="#d">d</a></li>
-      <li><a href="#e">e</a></li>
+      <li><a href="#b">二手区域2</a></li>
+      <li><a href="#c">二手区域3</a></li>
+      <li><a href="#d">二手区域4</a></li>
+      <li><a href="#e">二手区域5</a></li>
     </ul>
   </div>
   <!--展示区-->
   <div id="a" class="aarea">
-    <div class="product-card">
-      <h1>二手东西展示</h1>
-      <p>二手东西的简介</p>
-      <div class="product-pic"></div>
-      <div class="product-colors">
-        <span class="blue active" data-color="#7ed6df" data-pic="url(http://m.qpic.cn/psc?/V10dFOfT2bq6DV/OErzpq5D9LJxW5knQIpOPrsYrftcu8YcNukKFfeaF2XwROjVcflnR9LDlKuqWjH1kMWH0DN45yVQ09q4qeWaN0h3W3tAd*0U*Q63dr.xfLs!/anull&bo=OASgBQAAAAARB6k!&rf=photolist&t=5)"></span>
-        <span class="green" data-color="#badc58" data-pic="url(http://m.qpic.cn/psc?/V10dFOfT2bq6DV/OErzpq5D9LJxW5knQIpOPgROBQJw9x0Hvb8c.oPW6YlejHOgU7LO4q2RVVI5iMV76G0WJj2g6QCx1NwsqukJA1MIbnmUV0vGc4IBZckWxxo!/anull&bo=QAZVCDAMQBARCUk!&rf=photolist&t=5)"></span>
-        <span class="yellow" data-color="#f9ca24" data-pic="url(http://m.qpic.cn/psc?/V10dFOfT2bq6DV/OErzpq5D9LJxW5knQIpOPqh.rL.Kg4amfZbY7SHNU3RAxhqndIKSUc2a7zLT7deOWPP62fS.2vOoj8ap9W7bEXIJxpk3gNZ1foXq5qarskc!/anull&bo=QAZVCDAMQBARCUk!&rf=photolist&t=5)"></span>
-        <span class="rose" data-color="#ff7979" data-pic="url(http://m.qpic.cn/psc?/V10dFOfT2bq6DV/OErzpq5D9LJxW5knQIpOPtUHQUuEMvimYDDLr86O73dD7pLyLR1PRIbe.tTsvFBTKQKTbR8XG.G7MSSOWpPl734nWXhBaH9*E3znvmEe2gM!/anull&bo=QAZVCDAMQBARCUk!&rf=photolist&t=5)"></span>
-      </div>
-      <div class="product-info">
-        <div class="product-price">$90</div>
-        <a href="#" class="product-button">加入购物车</a>
-      </div>
-    </div>
+    
   </div>
   <div class="anniu">
   <div id="b" class="barea">
