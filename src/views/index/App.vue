@@ -18,13 +18,13 @@
     <!--轮播图-->
       <carousel>
         <div class="carousel-item">
-          <div class="carousel-img" style="padding-top: 130px;    font-size: 40px;color: #fff">第一个自定义html轮播图内容
+          <div class="carousel-img"><img class="carousel-img" src="../../../static/images/index_first.jpg"/>
           </div>
         </div>
-        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/carousel1.png"/></div>
-        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/carousel2.png"/></div>
-        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/carousel3.png"/></div>
-        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/carousel4.png"/></div>   
+        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/index_second.jpg"/></div>
+        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/index_third.jpg"/></div>
+        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/index_forth.jpg"/></div>
+        <div class="carousel-item"><img class="carousel-img" src="../../../static/images/index_five.jpg"/></div>   
         </carousel> 
         <!--新闻导航栏-->
        <main-tab-bar></main-tab-bar>
