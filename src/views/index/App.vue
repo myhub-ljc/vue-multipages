@@ -2,7 +2,7 @@
  <div id="app">
     <!--头部-->
     <div id="header">
-      <h2 id="wzm">名字暂定</h2>
+      <p id="wzm">卡纳蓝</p>
     </div>
     <!--头部和（轮播，新闻导航）之间的导航栏-->
     <div class="dao">
@@ -31,8 +31,7 @@
        <!--路由-->
        <router-view></router-view>
        <!--各个板块-->
-       <div class="model">
-      
+       <div class="model">    
          <h1 class="model_title">总共分为哪几个模块呢</h1>
          <div class="model_underLine"></div>
          <div class="box">
@@ -76,6 +75,9 @@
           </div>
          </div>
        </div>
+    <div class="dibu">
+      <h4>以上所有信息归卡纳蓝所有@违者必究</h4>
+    </div>
     </div>
 </template>
   
@@ -95,14 +97,16 @@ export default {
 <style>
   body{
   margin: 0;
+  padding: 0;
 }
 /*头部*/
 #header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin-top: -30px;
   background-color: pink;
 }
+
 .box1{
   width: 50px;
   height: 50px;
@@ -126,7 +130,11 @@ export default {
 /*头部标题*/
 #wzm{
   font-weight: bolder;
-  font-style: italic;
+  text-align: center;
+  font-size: 30px;
+}
+h2{
+  margin-top: -10px;
 }
 /*模块部分*/
 .model{
@@ -175,5 +183,16 @@ export default {
 }
 .box_item_shape:hover{
 	background: #82ccdd;
+}
+.dibu{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(192, 192, 192);
+  float: left;
+  border-radius: 20px;
+  margin-top: 2px;
+}
+h4{
+  text-align: center;
 }
 </style>
