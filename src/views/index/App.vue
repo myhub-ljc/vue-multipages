@@ -1,9 +1,11 @@
 <template>
  <div id="app">
     <!--头部-->
-    <div id="header">
-      <p id="wzm">卡纳蓝</p>
-    </div>
+    <div class="new">
+  <div class="frosted-glass">
+    <h1 class="title">卡&nbsp;纳&nbsp;蓝</h1>
+  </div>
+  </div>
     <!--头部和（轮播，新闻导航）之间的导航栏-->
     <div class="dao">
       <div class="biao">
@@ -56,7 +58,7 @@
           </div>
           <div class="box_item">
             <a href="parttime.html" target="_blank"><div class="box_item_shape">
-              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+              <img class= "box1" src="../../../static/images/parttime.png"/>
               </div></a>
             <div class="box_item_text">学生兼职区</div>
           </div>
@@ -69,7 +71,7 @@
       
           <div class="box_item">
             <a href="sijia.html" target="_blank"><div class="box_item_shape">
-              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+              <img class= "box1" src="../../../static/images/sijia.png"/>
               </div></a>
             <div class="box_item_text">私家小厨</div>
           </div>
@@ -99,14 +101,53 @@ export default {
   margin: 0;
   padding: 0;
 }
-/*头部*/
-#header{
+ @import url("https://fonts.googleapis.com/css?family=Lato:200");
+
+.new{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 60px;
-  margin-top: -30px;
-  background-color: pink;
+  height: 200px;
+  background: url(https://i.loli.net/2019/11/17/GAYyzeKsiWjP5qO.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
+.frosted-glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72vw;
+  height: 100px;
+  box-shadow: 0 0.3px 0.7px rgba(0, 0, 0, 0.126),
+    0 0.9px 1.7px rgba(0, 0, 0, 0.179), 0 1.8px 3.5px rgba(0, 0, 0, 0.224),
+    0 3.7px 7.3px rgba(0, 0, 0, 0.277), 0 10px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  transition: 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 0.7px 1px rgba(0, 0, 0, 0.157),
+      0 1.7px 2.6px rgba(0, 0, 0, 0.224), 0 3.5px 5.3px rgba(0, 0, 0, 0.28),
+      0 7.3px 11px rgba(0, 0, 0, 0.346), 0 20px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .title {
+    padding-left: 0.375em;
+    font-size: 3.6em;
+    font-family: Lato, sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.75em;
+    color: white;
+
+    @media (max-width: 640px) {
+      font-size: 2em;
+    }
+  }
+}
+h1{
+  font-size: 40px;
+}
 .box1{
   width: 50px;
   height: 50px;
@@ -126,12 +167,6 @@ export default {
   width: 30px;
   height: 30px;
   margin: 4px 5px;
-}
-/*头部标题*/
-#wzm{
-  font-weight: bolder;
-  text-align: center;
-  font-size: 30px;
 }
 h2{
   margin-top: -10px;
@@ -194,5 +229,28 @@ h2{
 }
 h4{
   text-align: center;
+}
+.neon {
+  color: #cce7f8;
+  font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  animation: shining 0.1s alternate infinite;
+}
+
+@keyframes shining {
+  from {
+    text-shadow: 0 0 6px rgba(182, 211, 207, 0.9),
+      0 0 30px rgba(182, 211, 207, 0.3), 0 0 12px rgba(15, 115, 223, 0.5),
+      0 0 21px rgba(15, 115, 223, 0.9), 0 0 34px rgba(15, 115, 223, 0.8),
+      0 0 54px rgba(15, 115, 223, 0.9);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(182, 211, 207, 1),
+      0 0 30px rgba(182, 211, 207, 0.4), 0 0 12px rgba(15, 115, 223, 0.6),
+      0 0 22px rgba(15, 115, 223, 0.8), 0 0 38px rgba(15, 115, 223, 0.9),
+      0 0 60px rgba(15, 115, 223, 1);
+  }
 }
 </style>
