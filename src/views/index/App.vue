@@ -1,7 +1,7 @@
 <template>
  <div id="app">
     <!--头部-->
-    <div class="new">
+  <div class="new">
   <div class="frosted-glass">
     <h1 class="title">卡&nbsp;纳&nbsp;蓝</h1>
   </div>
@@ -10,11 +10,11 @@
     <div class="dao">
       <div class="biao">
         <img class="carousel-img" src="../../../static/images/cart_empty.png"/>
-        <strong>购物车</strong>
+        <a href="" target="_blank"><strong>购物车</strong></a>
       </div>
       <div class="biao">
         <img class="carousel-img" src="../../../static/images/小蜜.png"/>
-        <strong>登陆</strong>
+        <a href="login.html" target="_blank"><strong>登陆</strong></a>
       </div>
     </div>
     <!--轮播图-->
@@ -102,7 +102,9 @@ export default {
   padding: 0;
 }
  @import url("https://fonts.googleapis.com/css?family=Lato:200");
-
+a{
+  text-decoration: none;
+}
 .new{
   display: flex;
   justify-content: center;

@@ -50,6 +50,24 @@ module.exports = {
       template: "./src/views/product/product.html",
       filename: "product.html",
       title: "秃头的科比"
+    },
+    login: {
+      entry: "./src/views/login/login.js",
+      template: "./src/views/login/login.html",
+      filename: "login.html",
+      title: "秃头的科比"
+    },
+    signUp: {
+      entry: "./src/views/signUp/signUp.js",
+      template: "./src/views/signUp/signUp.html",
+      filename: "signUp.html",
+      title: "秃头的科比"
+    },
+    retrieve: {
+      entry: "./src/views/retrieve/retrieve.js",
+      template: "./src/views/retrieve/retrieve.html",
+      filename: "retrieve.html",
+      title: "秃头的科比"
     }
   }
 }
