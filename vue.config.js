@@ -68,6 +68,12 @@ module.exports = {
       template: "./src/views/retrieve/retrieve.html",
       filename: "retrieve.html",
       title: "秃头的科比"
+    },
+    bofang: {
+      entry: "./src/views/bofang/bofang.js",
+      template: "./src/views/bofang/bofang.html",
+      filename: "bofang.html",
+      title: "秃头的科比"
     }
   }
 }

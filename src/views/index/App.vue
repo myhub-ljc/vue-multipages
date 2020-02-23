@@ -34,7 +34,7 @@
        <router-view></router-view>
        <!--各个板块-->
        <div class="model">    
-         <h1 class="model_title">总共分为哪几个模块呢</h1>
+         <h1 class="model_title">致力于服务全国学生</h1>
          <div class="model_underLine"></div>
          <div class="box">
           <div class="box_item">

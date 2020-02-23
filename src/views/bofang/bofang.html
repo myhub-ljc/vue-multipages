@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    .title{
+      margin-top:-140px;
+      margin-left: 180px;
+    }
+    p{
+      font-size: 10px;
+      color: rgb(123, 104,238);
+    }
+    iframe{
+      margin-top: 10px;
+      margin-left: 180px;
+    }
+    img{
+      margin-left: 20px;
+    }
+    .foot{
+      width: 1000px;
+      margin-left: 180px;
+    }
+    .foot h6{
+      float: left;
+      margin-top: 5px;
+    }
+    .foot .in{
+      border-radius: 10px;
+      float: right;
+      margin-top: -30px;
+    }
+    .foot button{
+      border-radius: 10px;
+      float: right;
+      margin-top: -30px;
+      background-color: rgb(123, 104, 238);
+    }
+
+    #toggle-button{ 
+      display: none; 
+    }
+    .button-label{
+      position: relative;
+      display: inline-block;
+      width: 80px;
+      height: 30px;
+      background-color: #ccc;
+      box-shadow: #ccc 0px 0px 0px 2px;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-top: 5px;
+      margin-left: 500px;
+    }
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .button-label .text {
+            line-height: 30px;
+            font-size: 18px;
+            text-shadow: 0 0 2px #ddd;
+        }
+
+        .on { color: #fff; display: none; text-indent: 10px;}
+        .off { color: #fff; display: inline-block; text-indent: 34px;}
+        .button-label .circle{
+            left: 0;
+            transition: all 0.3s;
+        }
+        #toggle-button:checked + label.button-label .circle{
+            left: 50px;
+        }
+        #toggle-button:checked + label.button-label .on{ display: inline-block; }
+        #toggle-button:checked + label.button-label .off{ display: none; }
+        #toggle-button:checked + label.button-label{
+            background-color: #51ccee;
+        }
+        .container{
+          background-image: linear-gradient(120deg,#487eb0,#fbc531);
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.txtb{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  margin-left: -10px;
+}
+
+h3{
+  margin: 10px 0;
+}
+
+.task{
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+  margin-left: -10px;
+}
+
+.task i{
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task{
+  width: 785px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  margin-left: -10px;
+}
+h1{
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <img src="http://r.photo.store.qq.com/psc?/V10dFOfT2Jfiu7/OErzpq5D9LJxW5knQIpOPnhCixBx9DxuO6JuolmbDOnKNGj*Vo*8QRLLs9jub7rmxletUKeDBBgSSNfAMLTkN3GyY1GBeev5leVg.Tm0*0k!/r" width="120" height="120"/>
+  <div class="title">
+    <h2>CUBA总决赛,北京大学vs清华大学</h2>
+    <p>学生体育赛事类&nbsp;&nbsp;&nbsp;&nbsp;2020-2-23 15:33</p>
+    <p>16.2万播放~477弹幕&nbsp;&nbsp;&nbsp;&nbsp;未经作者授权，禁止转载</p>
+  </div>
+  <iframe height=498 width=1000 src="http://player.youku.com/embed/XNzM4Njc1OTE2" frameborder=0 allowfullscreen></iframe>
+
+  <div class="foot">
+    <h6>100人正在看&nbsp;&nbsp;&nbsp;&nbsp;56条实时弹幕</h6>
+
+    <div class="toggle-button-wrapper">
+      <input type="checkbox" id="toggle-button" name="switch">
+      <label for="toggle-button" class="button-label">
+          <span class="circle"></span>
+          <span class="text on">弹幕</span>
+          <span class="text off">关</span>
+      </label>
+  </div>
+  
+    <input class="in" type="text" placeholder="请友善发言"/><button>发送</button>
+  </div>  
+
+  <h1>留言区</h1>
+  <div class="container">
+    <input type="text" class="txtb" placeholder="Add a task">
+    <div class="notcomp">
+      
+    </div>
+
+    <div class="comp">
+     
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(".txtb").on("keyup",function(e){
+      //13  means enter button
+      if(e.keyCode == 13 && $(".txtb").val() != "")
+      {
+        var task = $("<div class='task'></div>").text($(".txtb").val());
+        var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+          var p = $(this).parent();
+          p.fadeOut(function(){
+            p.remove();
+          });
+        });
+
+        var check = $("<i class='fas fa-check'></i>").click(function(){
+          var p = $(this).parent();
+          p.fadeOut(function(){
+            $(".comp").append(p);
+            p.fadeIn();
+          });
+          $(this).remove();
+        });
+
+        task.append(del,check);
+        $(".notcomp").append(task);
+          //to clear the input
+        $(".txtb").val("");
+      }
+    });
+  </script>
+</body>
+</html>
