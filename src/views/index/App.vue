@@ -73,7 +73,7 @@
             <a href="sijia.html" target="_blank"><div class="box_item_shape">
               <img class= "box1" src="../../../static/images/sijia.png"/>
               </div></a>
-            <div class="box_item_text">私家小厨</div>
+            <div class="box_item_text">时事新闻</div>
           </div>
          </div>
        </div>
