@@ -74,6 +74,12 @@ module.exports = {
       template: "./src/views/bofang/bofang.html",
       filename: "bofang.html",
       title: "秃头的科比"
+    },
+    news: {
+      entry: "./src/views/news/news.js",
+      template: "./src/views/news/news.html",
+      filename: "news.html",
+      title: "秃头的科比"
     }
   }
 }
