@@ -45,10 +45,11 @@
              <div class="box_item_text">二手交易市场</div> 
           </div> 
           <div class="box_item">
-            <a href="study.html" target="_blank"><div class="box_item_shape">
-              <img class= "box1" src="../../../static/images/m_dfm.png"/>
+            <a href="sijia.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/sijia.png"/>
               </div></a>
-            <div class="box_item_text">学习交流区</div>
+            <div class="box_item_text">私家小厨</div>
+              
           </div>
           <div class="box_item">
             <a href="video.html" target="_blank"><div class="box_item_shape">
@@ -68,12 +69,12 @@
               </div></a>
             <div class="box_item_text">新产品体验区</div>
           </div>
-      
+
           <div class="box_item">
-            <a href="sijia.html" target="_blank"><div class="box_item_shape">
-              <img class= "box1" src="../../../static/images/sijia.png"/>
+            <a href="study.html" target="_blank"><div class="box_item_shape">
+              <img class= "box1" src="../../../static/images/m_dfm.png"/>
               </div></a>
-            <div class="box_item_text">时事新闻</div>
+            <div class="box_item_text">学习交流区</div>
           </div>
          </div>
        </div>
