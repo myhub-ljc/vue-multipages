@@ -1,12 +1,12 @@
 <template>
   <div id="shequ">
     <h2>综合</h2>
-    <div class="first" id="b"><a href="#"><span>公告</span>&#12288;2月24日凌晨3点停机版本公告</a></div>
-    <div class="first" id="b"><a href="#"><span>公告</span>&#12288;事件详情</a></div>
-    <div class="first" id="c"><a href="bofang.html"><span>赛事</span>&#12288;CUBA总决赛</a></div>
-    <div class="first" id="d"><a href="bofang.html"><span>视频</span>&#12288;事件详情</a></div>
-    <div class="first" id="e"><a href="news.html"><span>其他</span>&#12288;事件详情</a></div>
-    <div class="first" id="e"><a href="news.html"><span>其他</span>&#12288;事件详情</a></div>
+    <div class="first" id="b"><a href="#"><span>[公告]</span>&#12288;2月24日凌晨3点停机版本公告</a></div>
+    <div class="first" id="b"><a href="#"><span>[公告]</span>&#12288;事件详情</a></div>
+    <div class="first" id="c"><a href="bofang.html"><span>[赛事]</span>&#12288;CUBA总决赛</a></div>
+    <div class="first" id="d"><a href="bofang.html"><span>[视频]</span>&#12288;事件详情</a></div>
+    <div class="first" id="e"><a href="news.html"><span>[其他]</span>&#12288;事件详情</a></div>
+    <div class="first" id="e"><a href="news.html"><span>[其他]</span>&#12288;事件详情</a></div>
   </div>
 </template>
 
@@ -35,18 +35,18 @@ export default {
   }
   #b span{
     border-radius: 5px;
-    border: 2px solid royalblue;
+    color: royalblue;
   }
   #c span{
     border-radius: 5px;
-    border: 2px solid greenyellow;
+    color: greenyellow;
   }
   #d span{
     border-radius: 5px;
-    border: 2px solid wheat;
+    color: wheat;
   }
   #e span{
     border-radius: 5px;
-    border: 2px solid black;
+    color: black;
   }
 </style>
